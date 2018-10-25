@@ -1,0 +1,42 @@
+@import './Mixins.scss';
+@import './Variables.scss';
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+	line-height: 18px;
+	font-weight:300;
+	color: $grey;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+img {
+	max-width: 100%;
+}
+strong {
+	font-weight: 700;
+}
+.container {
+	display: block;
+	width: 1110px;
+	max-width: 97%;
+	margin: 0 auto;
+}
+.hide {
+	opacity: 0;
+}
+.show {
+	opacity: 1;
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+}

@@ -1,0 +1,32 @@
+{
+   "name": "zara_technical_test",
+   "version": "0.1.0",
+   "description": "",
+   "author": "Tania Belinchón <taniabelinchon@gmail.com>",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tbelinchon/zara_technical_test.git"
+   },
+   "dependencies": {
+      "axios": "^0.18.0",
+      "node-sass-chokidar": "^1.1.2",
+      "normalize.css": "^8.0.0",
+      "react": "^16.6.0",
+      "react-dom": "^16.6.0",
+      "react-helmet": "^5.2.0",
+      "react-redux": "^5.0.7",
+      "react-router-dom": "^4.2.2",
+      "react-scripts": "1.1.1",
+      "react-test-renderer": "^16.2.0",
+      "redux": "^4.0.1",
+      "redux-thunk": "^2.3.0"
+   },
+   "scripts": {
+      "build-css": "node-sass-chokidar src/ -o src/",
+      "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject"
+   }
+}

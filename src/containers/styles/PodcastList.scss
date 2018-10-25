@@ -1,0 +1,66 @@
+@import '../../themes/Base.scss';
+
+.podcast-list {
+    @extend %full-width;
+    margin-top: 50px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+
+    .podcast-item {
+        float: left;
+        width: 23%;
+        margin-right: 2.6%;
+        position: relative;
+        display: flex;
+        @media screen and (max-width: $break-medium) {
+            width: 49%;
+            margin-right: 2%;
+        }
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 100px;
+            position: absolute;
+            display: table;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%,0%);
+            transform: -ms-translate(-50%,0%);
+            transform: -moz-translate(-50%,0%);
+            transform: -webkit-translate(-50%,0%);
+        }
+        div {
+            width: 100%;
+            border: 1px solid $ligth-grey;
+            text-align: center;
+            padding: 70px 10px 14px 10px;
+            margin: 100px 0px 70px 0px;
+            -webkit-box-shadow: -4px 3px 32px -5px rgba(0,0,0,0.32);
+            -moz-box-shadow: -4px 3px 32px -5px rgba(0,0,0,0.32);
+            box-shadow: -4px 3px 32px -5px rgba(0,0,0,0.32);
+            h4 {
+                @extend %full-width;
+                color: $dark-grey;
+                text-transform: uppercase;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                line-height: 15px;
+            }
+            span {
+                @extend %full-width;
+            }
+        }
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+        &:nth-child(2n) {
+            @media screen and (max-width: $break-medium) {
+                margin-right: 0%;
+            }
+        }
+    }
+}
