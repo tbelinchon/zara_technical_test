@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Searchbar from './../containers/Searchbar';
-import PodcastList from './../containers/PodcastList';
+import Searchbar from '../containers/Searchbar';
+import PodcastList from '../containers/PodcastList';
 
 export default class Home extends Component {
     render() {

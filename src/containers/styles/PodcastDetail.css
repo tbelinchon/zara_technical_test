@@ -1,0 +1,47 @@
+/*
+ * Mixins
+ */
+/*
+ * Extends
+ */
+.podcast-detail h1, .podcast-detail h1 span:last-child, .podcast-detail .description, .podcast-detail .description .title, .podcast-detail .description .text {
+  clear: both;
+  width: 100%;
+  display: block; }
+
+.podcast-detail {
+  -webkit-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32); }
+
+.podcast-detail {
+  float: left;
+  width: 30%;
+  padding: 18px;
+  margin-bottom: 50px;
+  color: #000; }
+  .podcast-detail img {
+    max-width: 77%;
+    display: block;
+    float: none;
+    margin: 10px auto 15px auto;
+    border-radius: 7px; }
+  .podcast-detail h1 {
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    margin: 12px 0px 20px 0px;
+    padding: 24px 11px;
+    font-size: 18px;
+    line-height: 22px; }
+    .podcast-detail h1 span:last-child {
+      font-style: italic;
+      font-size: 16px;
+      font-weight: 300; }
+  .podcast-detail .description .title {
+    font-weight: bold; }
+  .podcast-detail .description .text {
+    font-style: italic;
+    line-height: 20px; }
+    .podcast-detail .description .text p {
+      margin: 10px 0px; }

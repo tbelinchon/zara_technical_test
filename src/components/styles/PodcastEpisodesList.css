@@ -1,0 +1,31 @@
+/*
+ * Mixins
+ */
+/*
+ * Extends
+ */
+.podcast-episodes h2, .podcast-episodes .table-container {
+  clear: both;
+  width: 100%;
+  display: block; }
+
+.podcast-episodes h2, .podcast-episodes .table-container {
+  -webkit-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32); }
+
+.podcast-episodes {
+  float: right;
+  width: 65%;
+  color: #000;
+  margin-bottom: 50px; }
+  @media screen and (max-width: 991px) {
+    .podcast-episodes {
+      width: 100%; } }
+  .podcast-episodes h2 {
+    padding: 18px;
+    margin: 0px 0px 20px 0px; }
+  .podcast-episodes .table-container {
+    padding: 18px;
+    max-height: 650px;
+    overflow-y: auto; }

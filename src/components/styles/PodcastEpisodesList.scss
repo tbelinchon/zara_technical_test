@@ -1,0 +1,26 @@
+@import './../../themes/Mixins.scss';
+@import './../../themes/Variables.scss';
+
+.podcast-episodes {
+    float: right;
+    width: 65%;
+    color: $black;
+    margin-bottom: 50px;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+
+    h2 {
+        @extend %full-width;
+        @extend %box-shadow;
+        padding: 18px;
+        margin: 0px 0px 20px 0px;
+    }
+    .table-container {
+        @extend %full-width;
+        @extend %box-shadow;
+        padding: 18px;
+        max-height: 650px;
+        overflow-y: auto;
+    }
+}

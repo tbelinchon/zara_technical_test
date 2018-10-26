@@ -11,4 +11,4 @@ export const persistDataLocally = store => next => action => {
         localStorage.removeItem(LOCAL_STORAGE_KEY);
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(dataStore));
     }
-}
+};

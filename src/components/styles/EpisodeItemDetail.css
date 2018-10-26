@@ -1,0 +1,34 @@
+/*
+ * Mixins
+ */
+/*
+ * Extends
+ */
+.episode-detail h2, .episode-detail audio {
+  clear: both;
+  width: 100%;
+  display: block; }
+
+.episode-detail {
+  -webkit-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32);
+  box-shadow: -4px 3px 32px -5px rgba(0, 0, 0, 0.32); }
+
+.episode-detail {
+  float: right;
+  width: 65%;
+  color: #000;
+  margin-bottom: 50px;
+  padding: 30px 18px; }
+  @media screen and (max-width: 991px) {
+    .episode-detail {
+      width: 100%; } }
+  .episode-detail h2 {
+    margin: 0px 0px 20px 0px;
+    line-height: 25px; }
+  .episode-detail .description {
+    font-style: italic; }
+    .episode-detail .description p {
+      margin-bottom: 10px; }
+  .episode-detail audio {
+    margin-top: 20px; }

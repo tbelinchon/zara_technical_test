@@ -1,0 +1,31 @@
+@import './../../themes/Mixins.scss';
+@import './../../themes/Variables.scss';
+
+.episode-detail {
+    float: right;
+    width: 65%;
+    color: $black;
+    margin-bottom: 50px;
+    padding: 30px 18px;
+    @extend %box-shadow;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+
+    h2 {
+        @extend %full-width;
+        margin: 0px 0px 20px 0px;
+        line-height: 25px;
+    }
+    .description {
+        font-style: italic;
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    audio {
+        @extend %full-width;
+        margin-top: 20px;
+    }
+}

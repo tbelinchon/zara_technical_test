@@ -19,7 +19,8 @@
       "react-scripts": "1.1.1",
       "react-test-renderer": "^16.2.0",
       "redux": "^4.0.1",
-      "redux-thunk": "^2.3.0"
+      "redux-thunk": "^2.3.0",
+      "xml2js": "^0.4.19"
    },
    "scripts": {
       "build-css": "node-sass-chokidar src/ -o src/",

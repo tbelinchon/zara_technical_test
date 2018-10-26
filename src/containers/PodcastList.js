@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import PodcastItemList from './../components/PodcastItemList';
+import PodcastItemList from '../components/PodcastItemList';
 
 import './styles/PodcastList.css';
 
@@ -15,9 +15,9 @@ class PodcastList extends Component {
 	}
 
 	render() {
-	    return (
+		return (
 			<div className="podcast-list">
-			   	{this.createPodcastsList()}
+				{this.createPodcastsList()}
 			</div>
         );
 	}

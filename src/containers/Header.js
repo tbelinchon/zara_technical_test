@@ -12,7 +12,7 @@ class Header extends Component {
             <header>
                 <div className="container">
                     { isLoading ?
-                        <img src="images/loading.gif"/>
+                        <img src="/images/loading.gif" alt="Loading..." />
                         : null
                     }
                     <Link to="/">Podcaster</Link>

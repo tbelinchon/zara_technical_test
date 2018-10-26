@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Header from './../containers/Header';
+import Header from '../containers/Header';
 
-import ACTIONS from './../actions';
+import ACTIONS from '../actions';
 
 import 'normalize.css';
+import '../themes/Base.css';
 
 class App extends Component {
     render() {

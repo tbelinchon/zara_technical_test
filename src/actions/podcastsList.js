@@ -1,12 +1,14 @@
 import axios from 'axios';
 
 import { showLoading, showError } from './page';
-import { formatPodcast } from './../utils/podcast';
+import { formatPodcast } from '../utils/podcast';
 
 import * as TYPES from './types';
-import { ITUNES_URL } from './../utils/const';
+import { ITUNES_URL } from '../utils/const';
 
-/**Get all podcasts **/
+/*
+ * Get all podcasts
+ */
 export function getAllPodcasts() {
     return (dispatch) => {
         dispatch(showLoading(TYPES.PAGE_LOADING, true));
@@ -15,8 +17,8 @@ export function getAllPodcasts() {
             .then(({ data }) => {
                 let formatData = [];
 
-                data.feed.entry.forEach(podcast => {
-                    formatData.push(formatPodcast(podcast));
+                data.feed.entry.forEach((podcast) => {
+                    formatData.push(formatPodcast.serializeListData(podcast));
                 });
 
                 dispatch({
@@ -26,16 +28,18 @@ export function getAllPodcasts() {
 
                 dispatch(showLoading(TYPES.PAGE_LOADING, false));
             })
-            .catch((error) => dispatch(showError(TYPES.PAGE_ERROR, true, error)));
+            .catch(error => dispatch(showError(TYPES.PAGE_ERROR, true, error)));
     };
 }
 
-/** Filter podcast list **/
+/*
+ * Filter podcast list
+ */
 export function filterPodcasts(term) {
     return (dispatch, getState) => {
         const termLowerCase = term.toLowerCase();
-        const data = [ ...getState().podcastsListReducer.podcastsList ];
-        const results = data.filter(item => {
+        const data = [...getState().podcastsListReducer.podcastsList];
+        const results = data.filter((item) => {
             return termLowerCase === '' || item.name.toLowerCase().indexOf(termLowerCase) >= 0 || item.author.toLowerCase().indexOf(termLowerCase) >= 0;
         });
 
@@ -43,5 +47,5 @@ export function filterPodcasts(term) {
             type: TYPES.FILTER_PODCASTS,
             payload: results,
         });
-    }
+    };
 }

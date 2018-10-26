@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import ACTIONS from './../actions';
+import ACTIONS from '../actions';
 
 import './styles/Searchbar.css';
 
@@ -29,7 +29,7 @@ class SearchBar extends Component {
 	onInputChange(term) {
 		const { filterPodcasts } = this.props;
 
-		this.setState({ term: term }, () => {
+		this.setState({ term }, () => {
 			filterPodcasts(term);
 		});
 	}
@@ -39,16 +39,15 @@ class SearchBar extends Component {
 		const { podcastsFilteredList } = this.props;
 
 		return (
-			<div className="filter">
-				<span className="total-items">{podcastsFilteredList.length}</span>
-	         	<input
-					value={term}
-					onChange={event => this.onInputChange(event.target.value)}
-					placeholder="Filter podcasts..." />
-	        </div>
+		<div className="filter">
+			<span className="total-items">{podcastsFilteredList.length}</span>
+			<input
+				value={term}
+				onChange={event => this.onInputChange(event.target.value)}
+				placeholder="Filter podcasts..." />
+		</div>
 		);
 	}
-
 }
 
 function mapStateToProps(state) {

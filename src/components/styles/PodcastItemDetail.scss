@@ -1,0 +1,56 @@
+@import './../../themes/Mixins.scss';
+@import './../../themes/Variables.scss';
+
+.podcast-item-detail {
+    @extend %box-shadow;
+    float: left;
+    width: 30%;
+    padding: 18px;
+    margin-bottom: 50px;
+    color: $black;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+
+    img {
+        width: 77%;
+        max-width: auto;
+        display: block;
+        float: none;
+        margin: 10px auto 15px auto;
+        border-radius: 7px;
+    }
+    h1 {
+        @extend %full-width;
+        border-top: 1px solid $ligth-grey;
+        border-bottom: 1px solid $ligth-grey;
+        float: left;
+        margin: 12px 0px 20px 0px;
+        padding: 24px 11px;
+        font-size: 18px;
+        line-height: 22px;
+
+        span:last-child {
+            @extend %full-width;
+            font-style: italic;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    .description {
+        @extend %full-width;
+
+        .title {
+            @extend %full-width;
+            font-weight: bold;
+        }
+        .text {
+            @extend %full-width;
+            font-style: italic;
+            line-height: 20px;
+            p {
+                margin: 10px 0px;
+            }
+        }
+    }
+}
